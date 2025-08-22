@@ -1,0 +1,107 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+}
+
+.whole {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* ATM Card */
+.container {
+  width: 400px;
+  height: 230px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/* Bank name */
+.bank-name h3 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* Card number */
+.number h2 {
+  letter-spacing: 4px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* Card holder and expiry */
+.name,
+.exp {
+  display: flex;
+  flex-direction: column;
+}
+
+.name h5,
+.exp h5 {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+.holder-name {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.exp-date {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Input section */
+.input-box {
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.input-box h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.input-box h4 {
+  margin: 10px 0 5px;
+  font-weight: 500;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
