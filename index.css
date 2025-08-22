@@ -3,105 +3,154 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #2c3e50, #3498db);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  color: #fff;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  min-height: 100vh;
+  padding: 20px;
 }
 
+/* Whole container */
 .whole {
   display: flex;
-  gap: 40px;
+  gap: 30px;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-/* ATM Card */
+/* ATM Card Style */
 .container {
   width: 400px;
-  height: 230px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  height: 220px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #02274d, #74b2e4);
+  color: white;
   padding: 20px;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Bank name */
-.bank-name h3 {
+.bank-name {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: bold;
   letter-spacing: 2px;
 }
 
-/* Card number */
-.number h2 {
-  letter-spacing: 4px;
-  font-size: 22px;
-  font-weight: 500;
+.number {
+  margin-top: 40px;
 }
 
-/* Card holder and expiry */
-.name,
-.exp {
-  display: flex;
-  flex-direction: column;
+.card-number {
+  letter-spacing: 5px;
+  font-size: 24px;
 }
 
-.name h5,
-.exp h5 {
+.name {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.name h5 {
   font-size: 12px;
-  font-weight: 400;
   opacity: 0.8;
-  margin-bottom: 4px;
 }
 
 .holder-name {
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.exp {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  text-align: right;
+}
+
+.exp h5 {
+  font-size: 12px;
+  opacity: 0.8;
 }
 
 .exp-date {
   font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 1px;
 }
 
-/* Input section */
+/* Input Box */
 .input-box {
   background: #fff;
-  color: #333;
   padding: 20px;
   border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  min-width: 250px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .input-box h1 {
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 15px;
 }
 
 .input-box h4 {
   margin: 10px 0 5px;
-  font-weight: 500;
 }
 
 .input-box input {
   width: 100%;
-  padding: 8px 10px;
-  border: 1px solid #aaa;
-  border-radius: 6px;
-  outline: none;
-  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 📱 Responsive Design */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .whole {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    width: 350px;
+    height: 200px;
+  }
+
+  .card-number {
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+
+  .holder-name,
+  .exp-date {
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    height: 180px;
+    padding: 15px;
+  }
+
+  .card-number {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .holder-name,
+  .exp-date {
+    font-size: 12px;
+  }
+
+  .input-box {
+    width: 100%;
+    margin-top: 20px;
+  }
 }
